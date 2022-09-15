@@ -9,10 +9,10 @@ setInterval(function () {
     let secondsBeforeYearEnd = nextYear.getTime() - dateNow.getTime();
     let totalSecondsPerDay = 86400000;
 
-    let getDays = Math.floor(secondsBeforeYearEnd / totalSecondsPerDay);
-    let getHours = 24 - dateNow.getHours() - 1;
-    let getMinutes = 60 - dateNow.getMinutes() - 1;
-    let getSeconds = 60 - dateNow.getSeconds();
+    let getDays = (Math.floor(secondsBeforeYearEnd / totalSecondsPerDay)).toString().padStart(2, 0);
+    let getHours = (24 - dateNow.getHours() - 1).toString().padStart(2, 0);
+    let getMinutes = (60 - dateNow.getMinutes() - 1).toString().padStart(2, 0);
+    let getSeconds = (60 - dateNow.getSeconds()).toString().padStart(2, 0);
 
     days.innerText = getDays;
     hours.innerText = getHours;
